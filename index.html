@@ -32,14 +32,22 @@
             </div>
             <div class="box">
                 <label>Data:</label>
-                <input class="inputMediumSize" type="date" id="cidade" />
+                <input class="inputMediumSize" type="date" id="data" />
             </div>
             <div class="boxFullSize">
                 <label>Dados da Empresa(opcional):</label>
-                <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text" id="nome" />
+                <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text" id="dadosEmpresa" />
             </div>
-            <img src="icondoc" alt="">
-            <button id="botao">Gerar Vale</button>
+            <div class="boxFullSize">
+                <label>Duas vias?</label>
+                <input type="checkbox" id="duasVias" />
+            </div>
+            <button id="botao" onclick="imprime()">
+                <img src="icondoc.png" width="20%">
+                <div>
+                    <label id>Gerar Vale</label>
+                </div>
+            </button>
         </div>
     </div>
 
