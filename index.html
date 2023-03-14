@@ -11,45 +11,120 @@
 </head>
 
 <body>
-    <div class="formulario">
-        <h1>Vale</h1>
-        <div class="container">
-            <div class="box">
-                <label>Número (opcional):</label>
-                <input placeholder="011" type="number" id="numero" />
-            </div>
-            <div class="box">
-                <label>Valor:</label>
-                <input placeholder="00,00" type="number" id="valor" />
-            </div>
-            <div class="boxFullSize">
-                <label>Nome:</label>
-                <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text" id="nome" />
-            </div>
-            <div class="box">
-                <label>Cidade:</label>
-                <input class="inputMediumSize" type="text" id="cidade" />
-            </div>
-            <div class="box">
-                <label>Data:</label>
-                <input class="inputMediumSize" type="date" id="data" />
-            </div>
-            <div class="boxFullSize">
-                <label>Dados da Empresa(opcional):</label>
-                <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text" id="dadosEmpresa" />
-            </div>
-            <div class="boxFullSize">
-                <label>Duas vias?</label>
-                <input type="checkbox" id="duasVias" />
-            </div>
-            <button id="botao" onclick="imprime()">
-                <img src="icondoc.png" width="20%">
-                <div>
-                    <label id>Gerar Vale</label>
+    <section>
+        <div class="formulario">
+            <h1>Vale</h1>
+
+            <div class="container">
+                <div class="box">
+                    <label><b>Número (opcional):</b></label>
+                    <input placeholder="011" type="number" id="numeroInput" required />
                 </div>
-            </button>
+                <div class="box">
+                    <label><b>Valor:</b></label>
+                    <input placeholder="00,00" type="number" id="valorInput" required />
+                </div>
+                <div class="boxFullSize">
+                    <label><b>Nome:</b></label>
+                    <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text" id="nomeInput"
+                        required />
+                </div>
+                <div class="box">
+                    <label><b>Cidade:</b></label>
+                    <input class="inputMediumSize" type="text" id="cidadeInput" required />
+                </div>
+                <div class="box">
+                    <label><b>Data:</b></label>
+                    <input class="inputMediumSize" type="date" id="dataInput" required />
+                </div>
+                <div class="boxFullSize">
+                    <label><b>Dados da Empresa(opcional):</b></label>
+                    <input class="inputFullSize" placeholder="Ex.: Nome do funcionário" type="text"
+                        id="dadosEmpresaInput" required />
+                </div>
+                <div class="boxFullSize">
+                    <label class="labelCheckField"><b>Duas vias?</b></label>
+                    <input type="checkbox" id="duasViasInput" class="checkField"/>
+                </div>
+
+                <button id="botao" onclick="getDados()">
+                    <img src="icondoc.png" width="20%">
+                    <div class="labelButtonGerarVale">
+                        <label>Gerar Vale</label>
+                    </div>
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section>
+        <div class="botoesTop">
+            <div class="container">
+                <div class="buttonsOnTop">
+                    <button onclick="voltar()">
+                        <label class="labelButtonGerarVale">Voltar</label>
+                    </button>
+                    <button >
+                        <label class="labelButtonGerarVale">Imprimir</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <div class="boxImpressao">
+                <h2>VALE</h2>
+                <div class="numeroEValor">
+                    <label id="numeroAserImpresso"></label>
+                    <label id="numeroValorInput"></label>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="boxImpressao">
+                    <label class="atributosImpressao">NOME:</label>
+                    <label id="nomeImpresso"></b></label>
+                </div>
+                <div class="boxImpressao">
+                    <label class="atributosImpressao" id="">VALOR:</label>
+                    <label id="valorImpresso"></label>
+                </div>
+                <div class="boxImpressao">
+                    <label class="atributosImpressao">LOCAL/DATA:</label>
+                    <label id="localDataImpresso"></label>
+                </div>
+                <div class="botoesTop">
+                    <div class="containerCentralizado">
+                        <div class="boxAssinatura">
+                            <label>___________________________</label>
+                            <div class="assinaturaLabel">
+                                <label>Assinatura</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxDadosAssinatura">
+                    <label id="dadosEmpresaImpresso"></label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="botoesTop">
+            <div class="containerCentralizado">
+                <button id="botao">
+                    <img src="icondoc.png" width="20%" onclick="window.print()">
+                    <div class="labelButtonGerarVale">
+                        <label id>IMPRIMIR</label>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <script type="text/javascript" src="index.js">
+        </script>
+    </section>
+
 
     <script type="text/javascript" src="index.js">
     </script>
